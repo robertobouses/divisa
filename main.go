@@ -30,7 +30,7 @@ func main() {
 			var data ExchangeRate
 			json.NewDecoder(response.Body).Decode(&data)
 
-			fmt.Printf("El tipo de cambio a %v es:, ")
+			fmt.Printf("El tipo de cambio a %s es:\n", Divisa)
 			fmt.Println(data.Rates["EUR"])
 			cambio := data.Rates["EUR"]
 			resultado := cambio * cantidad
